@@ -16,9 +16,8 @@ public class JsonProcessServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         BufferedReader reader = request.getReader();
         String line = reader.readLine();
-
+        String json ="";
         while ((line = reader.readLine()) != null){
-            System.out.println(line);
 
         }
     }

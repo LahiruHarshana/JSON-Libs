@@ -3,6 +3,7 @@ package ijse.lk.jsonlibraries.jsonlibraries;
 import java.io.*;
 
 import jakarta.json.Json;
+import jakarta.json.JsonObject;
 import jakarta.json.JsonReader;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -27,7 +28,9 @@ public class JsonProcessServlet extends HttpServlet {
 
 //use json libraries
         JsonReader reader = Json.createReader(request.getReader());
-        reader.readObject();
+        JsonObject jsonObject = reader.readObject();
+
+
     }
 
 

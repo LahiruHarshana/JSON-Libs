@@ -4,6 +4,7 @@ import java.io.*;
 
 import jakarta.json.Json;
 import jakarta.json.JsonObject;
+import jakarta.json.JsonObjectBuilder;
 import jakarta.json.JsonReader;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -30,6 +31,12 @@ public class JsonProcessServlet extends HttpServlet {
         JsonReader reader = Json.createReader(request.getReader());
         JsonObject jsonObject = reader.readObject();
         System.out.println(jsonObject);
+
+
+        //json writer
+        //json libraries use
+        JsonObjectBuilder objectBuilder = Json.createObjectBuilder();
+
 
 
     }

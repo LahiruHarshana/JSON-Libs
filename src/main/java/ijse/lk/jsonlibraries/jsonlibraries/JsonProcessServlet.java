@@ -27,8 +27,9 @@ public class JsonProcessServlet extends HttpServlet {
 
 //use json libraries
         JsonReader reader = Json.createReader(request.getReader());
+        reader.readObject();
     }
-    }
+
 
     public void destroy() {
     }

@@ -2,6 +2,7 @@ package ijse.lk.jsonlibraries.jsonlibraries;
 
 import java.io.*;
 
+import jakarta.json.Json;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
@@ -20,8 +21,12 @@ public class JsonProcessServlet extends HttpServlet {
 //        String line = reader.readLine();
 //        String json ="";
 //        while ((line = reader.readLine()) != null){
-//
-//        }
+
+
+
+//use json libraries
+        Json.createReader(request.getReader()).readObject();
+        }
     }
 
     public void destroy() {

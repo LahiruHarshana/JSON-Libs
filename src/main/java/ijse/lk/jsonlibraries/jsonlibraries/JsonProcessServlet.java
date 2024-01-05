@@ -36,16 +36,16 @@ public class JsonProcessServlet extends HttpServlet {
         //json writer
         //json libraries use
         JsonObjectBuilder objectBuilder = Json.createObjectBuilder();
-        JsonObjectBuilder id = objectBuilder.add("id", "C001");
-        JsonObjectBuilder name = objectBuilder.add("name", "Kamal");
-        JsonObjectBuilder address = objectBuilder.add("address", "Galle");
-        objectBuilder.build();
+        objectBuilder.add("id", "C001");
+        objectBuilder.add("name", "Kamal");
+        objectBuilder.add("address", "Galle");
+
+        JsonObjectBuilder id = Json.createObjectBuilder();
+        JsonObjectBuilder name = Json.createObjectBuilder();
+        JsonObjectBuilder address = Json.createObjectBuilder(); // This line is unnecessary in your case
+
         response.getWriter().write(objectBuilder.build().toString());
 
 
-    }
-
-
-    public void destroy() {
     }
 }

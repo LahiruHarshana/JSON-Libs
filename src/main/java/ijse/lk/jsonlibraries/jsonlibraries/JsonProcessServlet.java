@@ -36,6 +36,7 @@ public class JsonProcessServlet extends HttpServlet {
         //json writer
         //json libraries use
         JsonObjectBuilder objectBuilder = Json.createObjectBuilder();
+        objectBuilder.add("id", "C001");
 
 
 

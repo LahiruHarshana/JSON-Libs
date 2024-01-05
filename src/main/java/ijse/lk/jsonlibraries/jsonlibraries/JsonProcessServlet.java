@@ -42,7 +42,7 @@ public class JsonProcessServlet extends HttpServlet {
 
         JsonObjectBuilder id = Json.createObjectBuilder();
         JsonObjectBuilder name = Json.createObjectBuilder();
-        JsonObjectBuilder address = Json.createObjectBuilder(); // This line is unnecessary in your case
+        JsonObjectBuilder address = Json.createObjectBuilder();
 
         response.getWriter().write(objectBuilder.build().toString());
 

@@ -35,16 +35,12 @@ public class JsonProcessServlet extends HttpServlet {
 
         //json writer
         //json libraries use
-        JsonObjectBuilder objectBuilder = Json.createObjectBuilder();
-        objectBuilder.add("id", "C001");
-        objectBuilder.add("name", "Kamal");
-        objectBuilder.add("address", "Galle");
+        JsonObjectBuilder builder = Json.createObjectBuilder();
+        builder.add("id", "C001");
+        builder.add("name", "Kamal");
+        builder.add("address", "Galle");
+        JsonObject customer = builder.build();
 
-        JsonObjectBuilder id = Json.createObjectBuilder();
-        JsonObjectBuilder name = Json.createObjectBuilder();
-        JsonObjectBuilder address = Json.createObjectBuilder();
-
-        response.getWriter().write(objectBuilder.build().toString());
 
 
     }

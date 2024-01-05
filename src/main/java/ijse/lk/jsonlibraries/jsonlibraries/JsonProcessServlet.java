@@ -38,6 +38,7 @@ public class JsonProcessServlet extends HttpServlet {
         JsonObjectBuilder objectBuilder = Json.createObjectBuilder();
         JsonObjectBuilder id = objectBuilder.add("id", "C001");
         JsonObjectBuilder name = objectBuilder.add("name", "Kamal");
+        JsonObjectBuilder address = objectBuilder.add("address", "Galle");
 
 
     }

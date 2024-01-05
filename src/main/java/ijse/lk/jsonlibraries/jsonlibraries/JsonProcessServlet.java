@@ -14,7 +14,7 @@ public class JsonProcessServlet extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
+        BufferedReader reader = request.getReader();
     }
 
     public void destroy() {

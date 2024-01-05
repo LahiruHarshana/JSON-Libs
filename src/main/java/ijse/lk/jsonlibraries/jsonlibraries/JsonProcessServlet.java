@@ -40,6 +40,7 @@ public class JsonProcessServlet extends HttpServlet {
         JsonObjectBuilder name = objectBuilder.add("name", "Kamal");
         JsonObjectBuilder address = objectBuilder.add("address", "Galle");
         objectBuilder.build();
+        response.getWriter().write(objectBuilder.build().toString());
 
 
     }

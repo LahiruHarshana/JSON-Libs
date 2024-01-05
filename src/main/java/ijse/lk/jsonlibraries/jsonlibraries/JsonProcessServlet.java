@@ -17,6 +17,10 @@ public class JsonProcessServlet extends HttpServlet {
         BufferedReader reader = request.getReader();
         String line = reader.readLine();
 
+        while (line != null) {
+            System.out.println(line);
+            line = reader.readLine();
+        }
     }
 
     public void destroy() {

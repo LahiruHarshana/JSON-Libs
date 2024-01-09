@@ -31,7 +31,6 @@ public class JsonProcessServlet extends HttpServlet {
         JsonObject jsonObject = reader.readObject();
         System.out.println(jsonObject);
 
-
         //json writer
         //json libraries use
         JsonObjectBuilder builder = Json.createObjectBuilder();

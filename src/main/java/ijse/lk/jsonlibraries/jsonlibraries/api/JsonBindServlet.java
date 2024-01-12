@@ -4,6 +4,7 @@ package ijse.lk.jsonlibraries.jsonlibraries.api;
 import ijse.lk.jsonlibraries.jsonlibraries.model.Student;
 import jakarta.json.Json;
 import jakarta.json.JsonBuilderFactory;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -42,4 +43,10 @@ public class JsonBindServlet extends HttpServlet {
 
     }
 
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Jsonb jsonb = JsonbBuilder.create();
+        Student student = jsonb.fromJson(req.getReader(), Student.class);
+        System.out.println(student);
+    }
 }

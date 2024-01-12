@@ -2,6 +2,6 @@ package ijse.lk.jsonlibraries.jsonlibraries.model;
 
 public class Student {
     private String id;
-    String name;
+    private String name;
     int age;
 }

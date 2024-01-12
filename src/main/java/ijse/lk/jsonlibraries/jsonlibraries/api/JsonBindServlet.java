@@ -1,4 +1,4 @@
-package ijse.lk.jsonlibraries.jsonlibraries;
+package ijse.lk.jsonlibraries.jsonlibraries.api;
 
 
 import jakarta.servlet.annotation.WebServlet;
@@ -17,6 +17,7 @@ public class JsonBindServlet extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
 
     }
 

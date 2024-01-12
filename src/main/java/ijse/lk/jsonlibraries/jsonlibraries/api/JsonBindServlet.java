@@ -36,6 +36,8 @@ public class JsonBindServlet extends HttpServlet {
 
         jsonb.toJson(students);
 
+        response.getWriter().println(jsonb.toJson(students));
+
 
 
     }

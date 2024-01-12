@@ -9,6 +9,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
+
 import jakarta.json.bind.Jsonb;
 import jakarta.json.bind.JsonbBuilder;
 
@@ -26,7 +28,12 @@ public class JsonBindServlet extends HttpServlet {
         Student s1 = new Student("S001","Kamal",25);
         Student s2 = new Student("S002","Nimal",26);
 
+        ArrayList<Student> students = new ArrayList<>();
+
         Jsonb jsonb = JsonbBuilder.create();
+
+        jsonb.toJson(students);
+
 
 
     }

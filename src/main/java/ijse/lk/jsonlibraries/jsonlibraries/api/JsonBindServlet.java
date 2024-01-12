@@ -2,12 +2,16 @@ package ijse.lk.jsonlibraries.jsonlibraries.api;
 
 
 import ijse.lk.jsonlibraries.jsonlibraries.model.Student;
+import jakarta.json.Json;
+import jakarta.json.JsonBuilderFactory;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
 import java.io.IOException;
+import jakarta.json.bind.Jsonb;
+import jakarta.json.bind.JsonbBuilder;
+
 
 @WebServlet(name = "JsonBindServlet", value = "/json-bind")
 public class JsonBindServlet extends HttpServlet {
@@ -20,6 +24,8 @@ public class JsonBindServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         new Student("S001","Kamal",25);
+
+        Jsonb jsonb = JsonbBuilder.create();
 
     }
 

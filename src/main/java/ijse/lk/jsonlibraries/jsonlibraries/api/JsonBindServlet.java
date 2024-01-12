@@ -24,7 +24,6 @@ public class JsonBindServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         new Student("S001","Kamal",25);
-
         Jsonb jsonb = JsonbBuilder.create();
 
     }

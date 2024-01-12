@@ -1,6 +1,7 @@
 package ijse.lk.jsonlibraries.jsonlibraries.api;
 
 
+import ijse.lk.jsonlibraries.jsonlibraries.model.Student;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -17,6 +18,8 @@ public class JsonBindServlet extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+        new Student("S001","Kamal",25);
 
 
     }

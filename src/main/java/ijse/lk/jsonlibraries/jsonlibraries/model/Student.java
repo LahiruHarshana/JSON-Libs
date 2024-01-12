@@ -1,5 +1,5 @@
 package ijse.lk.jsonlibraries.jsonlibraries.model;
 
-public class Customer {
+public class Student {
 
 }

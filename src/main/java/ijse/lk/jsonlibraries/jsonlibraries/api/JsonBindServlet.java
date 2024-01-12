@@ -23,8 +23,11 @@ public class JsonBindServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-        new Student("S001","Kamal",25);
+        Student s1 = new Student("S001","Kamal",25);
+        Student s2 = new Student("S002","Nimal",26);
+
         Jsonb jsonb = JsonbBuilder.create();
+
 
     }
 

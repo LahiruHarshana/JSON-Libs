@@ -38,15 +38,12 @@ public class JsonBindServlet extends HttpServlet {
         jsonb.toJson(students);
 
         response.getWriter().println(jsonb.toJson(students));
-
-
-
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Jsonb jsonb = JsonbBuilder.create();
-        Student student = jsonb.fromJson(req.getReader(), Student.class);
-        System.out.println(student);
+        ArrayList<Student> students = jsonb.fromJson(req.getReader(), ArrayList.class);
+        System.out.println(students);
     }
 }

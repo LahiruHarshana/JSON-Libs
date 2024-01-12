@@ -43,10 +43,11 @@ public class JsonBindServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Jsonb jsonb = JsonbBuilder.create();
-        ArrayList<Student> students = jsonb.fromJson(req.getReader(), ArrayList.class);
-        for (Student x:students) {
-            System.out.println(x);
+//        ArrayList<Student> students = jsonb.fromJson(req.getReader(), ArrayList.class);
+//        for (Student x : students) {
+//            System.out.println(x);
+//        }
 
-        }
+        Object studentList = jsonb.fromJson(req.getReader(),new ArrayList<Student>(){}.getClass().getGenericSuperclass());
     }
 }

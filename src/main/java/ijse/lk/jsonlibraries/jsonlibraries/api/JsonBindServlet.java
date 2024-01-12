@@ -29,6 +29,8 @@ public class JsonBindServlet extends HttpServlet {
         Student s2 = new Student("S002","Nimal",26);
 
         ArrayList<Student> students = new ArrayList<>();
+        students.add(s1);
+        students.add(s2);
 
         Jsonb jsonb = JsonbBuilder.create();
 

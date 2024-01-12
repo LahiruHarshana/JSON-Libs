@@ -21,7 +21,6 @@ public class JsonBindServlet extends HttpServlet {
 
         new Student("S001","Kamal",25);
 
-
     }
 
 }
